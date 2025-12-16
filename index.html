@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alessandro Virga | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         /* --- CSS STYLES --- */
         /* Impostazioni generali per font e colori */
@@ -101,6 +102,39 @@
             color: var(--accent-color);
         }
 
+        /* Stile per i link social */
+        .social-links {
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            color: var(--text-color);
+            font-size: 1.5rem;
+            margin: 0 15px;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Stile bottone */
+.btn {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #388e3c; /* Un verde leggermente più scuro */
+}
+
         /* Footer */
         footer {
             text-align: center;
@@ -137,21 +171,32 @@
         <section id="projects">
             <h2 class="section-title">Featured Projects</h2>
 
-            <div class="project-card">
-                <h3>Spaced-Repetition Chess Trainer</h3>
-                <p>
-                    A full-stack application designed to improve chess skills using spaced-repetition algorithms. 
-                    This project combines logic, database management, and user interface design to create an effective learning tool.
-                </p>
-                <p><em>(Link to repository coming soon)</em></p>
-            </div>
+<div class="project-card">
+    <h3>Spaced-Repetition Chess Trainer</h3>
+    <p>
+        A full-stack application designed to improve chess skills using spaced-repetition algorithms. 
+        This project combines logic, database management, and user interface design.
+    </p>
+    <a href="#" class="btn">View Code <i class="fab fa-github"></i></a>
+</div>
         </section>
 
-        <section id="contact">
-            <footer>
-                <p>&copy; 2025 Alessandro Virga. Built with HTML & CSS.</p>
-            </footer>
-        </section>
+<section id="contact" style="text-align: center; padding: 60px 0;">
+    <h2 class="section-title">Get In Touch</h2>
+
+    <div class="social-links">
+        <a href="https://github.com/alessandrovirga-cpu" target="_blank">
+            <i class="fab fa-github"></i>
+        </a>
+        <a href="www.linkedin.com/in/alessandro-virga-4976053" target="_blank">
+            <i class="fab fa-linkedin"></i>
+        </a>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Alessandro Virga. Built with HTML & CSS.</p>
+    </footer>
+</section>
     </div>
 
 </body>
