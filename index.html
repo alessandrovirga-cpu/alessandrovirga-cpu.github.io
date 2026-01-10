@@ -21,8 +21,9 @@
             border: 3px solid var(--accent-color);
             object-fit: cover;
             margin-bottom: 20px;
+            /* Aggiunta: dona profondità alla foto */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); 
         }
-
         /* Ottimizzazione per dispositivi mobili */
         @media (max-width: 600px) {
             .hero h1 {
@@ -125,6 +126,12 @@
             border-radius: 8px;
             margin-bottom: 20px;
             border: 1px solid #333;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-color); /* Il bordo si accende al passaggio */
         }
 
         .project-card h3 {
@@ -184,10 +191,11 @@
         }
 
         .skill-tag:hover {
-            transform: translateY(-3px); /* Effetto sollevamento */
+            transform: translateY(-5px) scale(1.05); /* Sollevamento più fluido */
             background-color: var(--accent-color);
-            color: #000;
-            cursor: default;
+            color: #121212; /* Testo scuro su fondo verde per leggibilità */
+            box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3); /* Glow verde */
+            cursor: pointer;
         }
 
         /* Footer */
