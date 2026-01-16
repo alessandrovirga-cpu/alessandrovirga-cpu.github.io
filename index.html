@@ -82,10 +82,25 @@
             text-decoration: none;
             margin-left: 20px;
             font-size: 1rem;
+            position: relative; /* Necessario per posizionare la linea */
+            transition: var(--transition);
         }
 
-        nav a:hover {
-            color: var(--accent-color);
+        /* Creiamo la linea sotto il link */
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--accent-color);
+            transition: width 0.3s ease;
+        }
+
+        /* La linea si allunga quando passi il mouse */
+        nav a:hover::after {
+            width: 100%;
         }
 
         /* Sezione Hero (La tua bio) */
@@ -145,31 +160,37 @@
         }
 
         .social-links a {
-            color: var(--text-color);
-            font-size: 1.5rem;
-            margin: 0 15px;
-            transition: color 0.3s ease;
+            display: inline-block; /* Permette la trasformazione */
+            transition: transform 0.3s ease, color 0.3s ease;
         }
 
         .social-links a:hover {
             color: var(--accent-color);
+            transform: scale(1.3); /* Ingrandisce l'icona del 30% */
+            text-shadow: 0 0 10px rgba(76, 175, 80, 0.5); /* Aggiunge un leggero bagliore */
         }
 
-        /* Stile bottone */
         .btn {
             display: inline-block;
             background-color: var(--accent-color);
             color: #fff;
-            padding: 10px 20px;
+            padding: 12px 24px; /* Un po' più di spazio lo rende più "cliccabile" */
             border-radius: 5px;
             text-decoration: none;
             font-weight: bold;
             margin-top: 10px;
-            transition: background-color 0.3s;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
         }
 
         .btn:hover {
-            background-color: #388e3c; /* Un verde leggermente più scuro */
+            background-color: #388e3c;
+            transform: translateY(-2px); /* Si solleva */
+            box-shadow: 0 6px 12px rgba(76, 175, 80, 0.3); /* L'ombra aumenta */
+        }
+
+        .btn:active {
+            transform: translateY(0); /* Torna giù quando clicchi, simulando un tasto vero */
         }
 
         /* Sezione Skills */
